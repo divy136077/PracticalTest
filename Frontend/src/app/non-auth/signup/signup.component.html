@@ -1,0 +1,85 @@
+<div class="container">
+  <h3>Add User</h3>
+  <div class="formdiv">
+    <form [formGroup]="empForm">
+      <h4>Add</h4>
+
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-12">
+          <label for="inputPassword5" class="form-label">First Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id=""
+            placeholder="First Name"
+            formControlName="FirstName"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-12">
+          <label for="inputPassword5" class="form-label">Last Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id=""
+            placeholder="Last Name"
+            formControlName="LastName"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-12">
+          <label for="inputPassword5" class="form-label">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            id=""
+            placeholder="email"
+            formControlName="Email"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-12">
+          <label for="inputPassword5" class="form-label">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            id=""
+            placeholder="Password"
+            formControlName="Password"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-12">
+          <label for="inputPassword5" class="form-label"
+            >Conform Password</label
+          >
+          <input
+            class="form-control"
+            type="password"
+            id=""
+            placeholder="Conform Password"
+            formControlName="ConformPassword"
+          />
+        </div>
+      </div>
+      <br />
+      <hr />
+      <button class="btn sub"  type="submit" routerLink="/" (click)="diag()">
+          Submit
+        </button>
+      <button class="btn can" type="submit" routerLink="/">
+          Cancel
+        </button>
+      <br />
+    </form>
+  </div>
+</div>

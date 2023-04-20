@@ -1,0 +1,49 @@
+<!-- <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                
+                <form [formGroup]="chatForm" (ngSubmit)="onSubmit()"  enctype="multipart/form-data">
+                  
+                    <div class="form-group">
+                        <label>Message</label>
+                        <input type="text" formControlName="Message" class="form-control"/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="myfile">Select a file:</label>
+                        <input type="file" id="myfile" name="myfile" formControlName="File"><br><br>
+                    </div>
+                   
+                    <button type="submit"   class="btn btn-primary" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="d-flex justify-content-center container mt-5">
+  <div class="wrapper">
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmit()"  enctype="multipart/form-data">
+    <div class="main">
+      <div class="px-2 scroll" *ngFor="let element of allData">
+        {{element.Message}}
+        {{element.File}}
+      </div>
+      <nav
+        class="navbar bg-white navbar-expand-sm d-flex justify-content-between">
+        <input type="text" placeholder="text a message" formControlName="Message" class="form-control"/>
+        <div
+          class="icondiv d-flex justify-content-end align-content-center text-center ml-2"
+        >
+        
+        <i class="fa-solid fa-cubes" style="margin-right: 5px;" (click)="fileChoose()" >
+        </i>
+          <button class="btn" type="submit"><i>^</i></button>
+        </div>
+    </nav>
+     <input type="file" id="myfile" name="myfile" style="display: none;" formControlName="File"><br><br>
+    </div>
+    </form>
+  </div>
+</div>
