@@ -30,6 +30,11 @@
         {{element.Message}}
         {{element.File}}
       </div>
+
+      <button class="btn1 btn-danger mb-1 mt-2" style="margin-left: 60px;" *ngIf="imageSrc"
+    (click)="delete()">delete</button><br>
+  <img id="blah" *ngIf="imageSrc!" [src]="imageSrc" style="height: 100px; width: 120px;" alt="/" />
+
       <nav
         class="navbar bg-white navbar-expand-sm d-flex justify-content-between">
         <input type="text" placeholder="text a message" formControlName="Message" class="form-control"/>
@@ -42,8 +47,14 @@
           <button class="btn" type="submit"><i>^</i></button>
         </div>
     </nav>
-     <input type="file" id="myfile" name="myfile" style="display: none;" formControlName="File"><br><br>
+     <input type="file" id="myfile" name="myfile" style="display: none;" formControlName="File" (change)="readURL($event);" accept="image/jpeg,image/png,application/pdf,image/x-eps" ><br><br>
     </div>
+  
     </form>
   </div>
 </div>
+
+
+
+
+<!-- (change)="onChange($event)" -->
